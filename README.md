@@ -47,3 +47,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Backend:** Node.js + Express + TypeScript
 - **RSS parsing:** `rss-parser`
 - **Frontend:** Vanilla HTML + CSS + JavaScript (no frameworks)
+
+## Deployment
+
+A GitHub Actions workflow is included at `.github/workflows/deploy.yml`.
+
+- Triggers on pushes to `main` (and can be run manually with **workflow_dispatch**)
+- Installs dependencies and runs `npm run build`
+- Deploys the website in `public/` to GitHub Pages
+
+To use it, enable **GitHub Pages** in repository settings and set the source to **GitHub Actions**.
